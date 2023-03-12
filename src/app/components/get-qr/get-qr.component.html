@@ -1,0 +1,34 @@
+<div class="body">
+    <div class="center">
+        <div *ngIf="message" class="alert alert-danger" style="margin-bottom: 10px;" role="alert">{{ message }}</div>
+        <h1>Get your QR code</h1>
+        <form>
+            <div class="inputbox">
+                <input type="text" required="required" name="id" [(ngModel)]="id">
+                <span>Enter your Id</span>
+            </div>
+            <div class="inputbox">
+                <input type="button" value="submit" (click)="getqr()">
+            </div>
+
+            <div *ngIf="loading">
+                <div class="card">
+                    <div class="card-header">Generating requested qr code</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <img src="../../../assets/loader/Settings.gif" alt="loading...">
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+            <div class="card" *ngIf="qr_src">
+                <div class="card-header">Generated qr code for id: {{id}}</div>
+                <ul class="list-group list-group-flush" *ngIf="qr_src">
+                    <li class="list-group-item">
+                        <img [src]="qr_src" alt="">
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</div>

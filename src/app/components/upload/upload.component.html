@@ -1,0 +1,59 @@
+<div class="container">
+
+    <div class="title">Create ticket</div>
+    <form action="dialog" [formGroup]="ticket_generater" (ngSubmit)="submit()">
+        <div *ngIf="message" class="alert alert-danger mt-2" role="alert">{{ message }}</div>
+  
+        <div class="user_details">
+            <div class="input_pox">
+                <label for="honey_type" class="details">Honey Type</label>
+                <input type="text"  placeholder="enter here" formControlName="honey_type">
+            </div>
+            <div class="input_pox">
+                <span for="honey_origin" class="details">Honey Origin</span>
+                <input type="text" placeholder="enter here" formControlName="honey_origin">
+            </div>
+            <div class="input_pox">
+                <span for="honey_origin" class="details">Honey weight</span>
+                <input type="text" placeholder="enter here in kg eg(15)" formControlName="honey_weight">
+            </div>
+            <div class="input_pox">
+                <label for="diastate" class="details">Diastate</label>
+                <input type="text" placeholder="enter here" formControlName="diastate">    
+          </div>
+            <div class="input_pox">
+                <span for="h_m_f" class="details">H.M.F</span>
+                <input type="text" placeholder="enter here" formControlName="h_m_f">
+            </div>
+            <div class="input_pox">
+                <label for="moister" class="details">Moister</label>
+                <input type="text" placeholder="enter here" formControlName="moister">
+            </div>
+            <div class="input_pox">
+                <label for="acidity" class="details">Acidity</label>
+                <input type="text" placeholder="enter here" formControlName="acidity">
+            </div>
+            <div class="input_pox">
+                <label for="ph" class="details">P.H</label>
+                <input type="text" placeholder="enter here" formControlName="ph">
+            </div>
+            <div class="input_pox">
+                <label for="color" class="details">Color</label>
+                <input type="text" placeholder="enter here" formControlName="color">
+            </div>
+            <div class="input_pox">
+                <label for="electrical_cunductivity" class="details">Electrical Cunductivity</label>
+                <input type="text" placeholder="enter here" formControlName="electrical_cunductivity">
+            </div>
+            <div class="input_pox" style="width: 66% !important;">
+                <span for="honey_coordinates" class="details">Honey Coordinates</span>
+                <input type="text" placeholder="enter here" formControlName="honey_coordinates">
+        
+            </div>
+        </div>
+        <div class="button">
+            <input type="submit" value="Submit">
+            <input type="button" value="Have an id? Get a qr code" routerLink="get_qr">
+        </div>
+    </form>
+</div>

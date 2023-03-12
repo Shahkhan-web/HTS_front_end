@@ -1,0 +1,83 @@
+<div *ngIf="message" class="alert alert-danger" style="margin-bottom: 10px;" role="alert">{{ message }}</div>
+<div id="honeycomb" *ngIf="honey_info">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-6 mb-4 mb-lg-0">
+                <div class="card mb-3" style="border-radius: .5rem;">
+                    <div class="row g-0">
+                        <div class="col-md-12">
+                            <div class="card-body p-4">
+                                <h6>Information</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-1">
+                                    <div class="col-4 mb-3">
+                                        <h6>Honey type</h6>
+                                        <p class="text-muted">{{honey_info.honey_type}}</p>
+                                    </div>
+                                    <div class="col-4 mb-3">
+                                        <h6>Honey Weight</h6>
+                                        <p class="text-muted">{{honey_info.honey_weight}}Kg</p>
+                                    </div>
+                                    <div class="col-4 mb-3">
+                                        <h6>Honey Origin</h6>
+                                        <p class="text-muted">{{honey_info.honey_origin}}</p>
+                                    </div>
+                                </div>
+                                <h6>Sceintific info</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-1">
+                                    <div class="col-3 mb-3">
+                                        <h6>PH</h6>
+                                        <p class="text-muted">{{honey_info.ph}}</p>
+                                    </div>
+                                    <div class="col-3 mb-3">
+                                        <h6>Color</h6>
+                                        <p class="text-muted">{{honey_info.color}}</p>
+                                    </div>
+                                    <div class="col-3 mb-3">
+                                        <h6>Moister</h6>
+                                        <p class="text-muted">{{honey_info.moister}}</p>
+                                    </div>
+                                    <div class="col-3 mb-3">
+                                        <h6>Acidity</h6>
+                                        <p class="text-muted">{{honey_info.acidity}}</p>
+                                    </div>
+                                </div> 
+                                <div class="row pt-1">
+                                    <div class="col-4 mb-3">
+                                        <h6>Electrical cunductivity</h6>
+                                        <p class="text-muted">{{honey_info.electrical_cunductivity}}</p>
+                                    </div>
+                                    <div class="col-4 mb-3">
+                                        <h6>H.M.F</h6>
+                                        <p class="text-muted">{{honey_info.h_m_f}}</p>
+                                    </div>
+                                    <div class="col-4 mb-3">
+                                        <h6>Diastate</h6>
+                                        <p class="text-muted">{{honey_info.diastate}}</p>
+                                    </div> 
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- {
+    "timeStamp": "12297673",
+    "honeyInfo": {
+    //  "honey_origin": "test1",
+      //"honey_type": "test2",
+    //  "honey_weight": "test3",
+      "honey_coordinates": "test4",
+      "h_m_f": "test5",
+    //  "moister": "test6",
+  //    "acidity": "test7",
+  //    "ph": "test8",
+   //   "color": "test9",
+      "electrical_cunductivity": "test10",
+      "diastate": "test11"
+    }
+  } -->

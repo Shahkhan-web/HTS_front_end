@@ -1,0 +1,35 @@
+<!-- <div *ngIf="currentFile" class="progress">
+  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+    attr.aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{ width: progress + '%' }">
+    {{ progress }}%
+  </div>
+</div>
+
+<label class="btn btn-default">
+  <input type="file" name="file" (change)="selectFile($event)" />
+</label>
+ 
+<button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">
+  Upload
+</button>  -->
+
+<div class="alert alert-light" role="alert">{{ message }}</div>
+
+<div *ngIf="loading">
+  <div class="card">
+    <div class="card-header">Generating requested qr code</div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <img src="../../../assets/loader/Settings.gif" alt="loading...">
+      </li> 
+    </ul>
+  </div>
+</div>
+<div class="card" *ngIf="fileInfos">
+  <div class="card-header">Generated qr code for id: {{qr_id}}</div>
+  <ul class="list-group list-group-flush" *ngIf="fileInfos">
+    <li class="list-group-item">
+        <img [src]="fileInfos" alt="">
+    </li> 
+  </ul>
+</div>
